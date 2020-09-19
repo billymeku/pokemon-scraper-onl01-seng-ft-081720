@@ -30,25 +30,4 @@
       Pokemon.new(id: id, name: row[1], type: row[2], db: db)
     end.first 
 
-
- 
-  def initialize(name:, grade:, id=nil)
-    @name = name
-    @type = type 
-    @id = id
-  end
-  
-  
-  def self.save
-    sql = <<-SQL
-      INSERT INTO students (name, type) 
-      VALUES (?, ?)
-    SQL
-
-    DB[:conn].execute(sql, self.name, self.type)
-  end
-  
-  def self.find
-    
-  end 
-end
+end 
